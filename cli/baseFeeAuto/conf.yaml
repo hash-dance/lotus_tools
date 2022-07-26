@@ -1,0 +1,48 @@
+demo:
+  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.***"
+  address: "172.18.6.57:1234"
+
+storage:
+  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.***"
+  address: "172.18.4.169:2345"
+
+setting:
+  #  基础费
+  refreshTime: 10
+  refreshBaseFee: 20
+  baseFee: 2000000000
+  baseFeeMax: 5000000000
+# 跑消息的百分比高度
+  baseFeePercent: 60
+  timeKeep: 2 # 预期疏通消息的时间, 当达到这个期望值, 全速疏通消息
+  mpoolThresholdHigh: 0 # 消息数量的阈值, 达到这个阈值全速疏通消息, 0 不生效
+  mpoolThresholdLow: 20 # 消息数量的阈值, 达到这个阈值限速疏通消息, 0 不生效
+  stepFee:
+    #  阶梯提费, 必须按照顺序写
+#    - hour: 2
+#      fee: 1000000000
+#    - hour: 3
+#      fee: 1500000000
+
+  preLimit: 23078435
+  proLimit: 53307446
+  preBreakLimit: 700000
+
+  limitEstimateSeed: 105
+  limitAdjustSeed: 10
+  limitMaxPremium: 21000000
+  premiumSeed: 200
+  onceMax: 2
+  #  钱包地址配置
+  addresses:
+    - f3ulm32bibybv7srwsq25dhl7grvbnyjyonmps5fgtpi65qsauf*******
+prometheus:
+  port: 8882
+alert:
+  dingding:
+    url: https://oapi.dingtalk.com/robot/send?access_token=****
+
+# redis 配置
+redisAddress: localhost:6379
+redisPassword: password
+redisDBNumber: 1

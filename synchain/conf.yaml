@@ -1,0 +1,16 @@
+lotus:
+  token: ""
+  address: "172.18.7.193:1234"
+  #address: "172.18.5.202:1234"
+mongodb:
+  server: 192.168.1.157:27037
+  noAuth: false
+  username: admin
+  password: admin
+  database: filecoin_test
+syncConfig:
+#  height: 329700
+  height: 896008
+  stopHeight: 0
+  maxOnce: 2
+  timeWait: 10

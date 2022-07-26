@@ -1,0 +1,31 @@
+lotus:
+    #  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xx"
+  token: ""
+  address: "172.18.5.202:1234"
+setting:
+  #  基础费
+  baseFee: 2000000000
+  stepFee:
+    #  阶梯提费, 必须按照顺序写
+    - hour: 2
+      fee: 3000000000
+    - hour: 3
+      fee: 3500000000
+
+  preLimit: 41078435
+  preBreakLimit: 400000
+  proLimit: 74078435
+  limitEstimateSeed: 130
+  limitAdjustSeed: 30
+  onceMax: 150
+  #  钱包地址配置
+  addresses:
+    #    - f3ulm32bibybv7srwsq25dhl7grvbnyjyonmps5fgtpi65qsauf7dxbn4wlisjtpya7xxxx
+    - f3qvb6ldbki4wc4b4gxecgv3pekmxvzkhtzwa5ffuthlccvuk33mgpyfxhqdtj5ixxxx
+prometheus:
+  port: 8882
+
+# redis 配置
+redisAddress: localhost:6379
+redisPassword: password
+redisDBNumber: 1
